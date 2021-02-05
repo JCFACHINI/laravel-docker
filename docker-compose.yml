@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    phpcontainer:
+        container_name: ${APP_NAME}_laravel
+        image: php:7.2-fpm
+        ports:
+            - 8090:8090
+        volumes:
+            - ./:/var/www/html:cached
+        command:
+            - ./docker.sh
